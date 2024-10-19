@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@Tenzero !!</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            color: rgb(54, 52, 52);
+            text-align: center;
+            background-color: #000000;
+        }
+        header {
+            background-color: transparent #000000;
+            color: white;
+            padding: 1em;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 2px 10px rgba(55, 18, 114, 0.3);
+        }
+        .banner {
+            background-image: url("C:\Users\Suyog\Documents\web\LOGO.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 250px;
+            filter: brightness(0.7);
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 2em;
+            background-color: transparent #0f0e0e;
+            border-radius: 2px;
+            margin: 16px;
+            animation: fadeIn 3s ease-in-out;
+        }
+        .social-icons img {
+            width: 50px;
+            margin: 10px;
+            transition: transform 2s, filter 0.3s;
+        }
+        .social-icons img:hover {
+            transform: scale(1.2);
+            filter: brightness(1.6);
+        }
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent rgba(78, 78, 78, 0.7);
+            z-index: 1px;
+        }
+        .glow h1, h2, p  {
+  font-size: 20px;
+  color: #501593;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap-reverse;
+        }
+        .discord-profile {
+            background-color: transparent #290d63;
+            border-radius: 6px;
+            padding: 1em;
+            display: inline-flex;
+            text-align: left;
+            color: rgb(74, 33, 134);
+            transition: box-shadow 0.3s, transform 2s;
+            animation: slideIn 2s ease-in-out;
+        }
+        .discord-profile:hover {
+            box-shadow: 0 0 15px #4e0f8d;
+            transform: scale(1.05);
+        }
+        .discord-profile img {
+            border-radius: 60%;
+            width: 95px;
+            height: 95px;
+            vertical-align: middle;
+        }
+        .discord-profile .details {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 60px; 
+        }
+        .viewer-count {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #43187e;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 140px;
+            background-color: rgb(81, 81, 81);
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 2;
+            bottom: 120%; 
+            left: 50%;
+            margin-left: -70px;
+            opacity: 3;
+            transition: fadein 1s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 3;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 5; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; } {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: 1s ease-in-out infinite alternate;
+}
+  }
+@keyframes glow 
+    
+ {
+  from {
+    text-shadow: 0 0 10px #43187e, 0 0 20px #43187e, 0 0 20px #43187e, 0 0 20px #43187e, 0 0 30px #43187e, 0 0 40px #43187e, 0 0 40px #43187e;
+  }
+  to {
+    text-shadow: 0 0 20px #43187e, 0 0 20px #43187e, 0 0 20px #43187e, 0 0 30px #43187e, 0 0 30px #43187e, 0 0 30px #43187e, 0 0 60px #43187e;
+  }
+}
+        
+        
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <video class="background-video" autoplay muted loop>
+        <source src="C:\Users\Suyog\Documents\web\vddo.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <header>
+        <h1>TENZERO HERE !!</h1>
+    </header>
+    <div class="banner"></div>
+    <div class="content">
+        <div class="discord-profile" id="discord-profile">
+          
+            <img src="C:\Users\Suyog\Documents\web\LOGO.jpg" alt="Avatar">
+            <div class="details">
+                <h2>TENZERO !!</h2>
+                <p id="profile-text">Good things takes time</time>!</p>
+            </div>
+        </div>
+        <div class="container social-icons">
+            <a href="https://www.youtube.com/@tenzero_editz" target="_blank" class="tooltip">
+                <img src="C:\Users\Suyog\Documents\web\youtube.png" alt="YouTube">
+                <span class="tooltiptext">YouTube</span>
+            </a>
+            <a href="https://discord.com/invite/tenzero-ka-surver" target="_blank" class="tooltip">
+                <img src="C:\Users\Suyog\Documents\web\icons8-discord-50.png" alt="Discord">
+                <span class="tooltiptext">Discord Surver</span>
+            </a>
+            <a href="https://www.instagram.com/its_mee_suyog/" target="_blank" class="tooltip">
+                <img src="C:\Users\Suyog\Documents\web\instagram.png" alt="Instagram">
+                <span class="tooltiptext">Instagram</span>
+            </a>
+            <audio autoplay loop>
+                <source src= "C:\Users\Suyog\Documents\web\mp3.MP3" type="audio/mp3">
+            </audio>
+        </div>
+        <div class="viewer-count">
+            Total Views: <span id="total-views">0</span>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        window.onload = function() {
+            document.body.style.opacity = 0;
+            let last = +new Date();
+            const fadeIn = function() {
+                document.body.style.opacity = +document.body.style.opacity + (new Date() - last) / 400;
+                last = +new Date();
+                if (+document.body.style.opacity < 1) {
+                    (window.requestAnimationFrame && requestAnimationFrame(fadeIn)) || setTimeout(fadeIn, 16);
+                }
+            };
+            fadeIn();
+            updateTotalViews();
+        };
+        function updateTotalViews() {
+            let views = localStorage.getItem('totalViews') || 0;
+            views++;
+            localStorage.setItem('totalViews', views);
+            document.getElementById('total-views').innerText = views;
+        }
+    </script>
+</body>
+</html>
